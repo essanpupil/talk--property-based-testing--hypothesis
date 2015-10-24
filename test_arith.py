@@ -1,3 +1,10 @@
+"""
+http://hypothesis.readthedocs.org/
+
+https://github.com/michel-slm/
+"""
+
+
 from hypothesis import (
     given,
     assume
