@@ -6,12 +6,14 @@ def encode(input_string):
     count = 1
     prev = ''
     lst = []
+    if not input_string:
+        return []
     for character in input_string:
         if character != prev:
             if prev:
                 entry = (prev, count)
                 lst.append(entry)
-            count = 1
+            # count = 1
             prev = character
         else:
             count += 1
