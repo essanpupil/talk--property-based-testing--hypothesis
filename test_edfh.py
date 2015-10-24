@@ -3,7 +3,7 @@ from hypothesis.strategies import integers
 
 
 def csum_to(n):
-    return [sum(range(i)) for i in range(n+1)]
+    return [sum(range(i+1)) for i in range(n+1)]
 
 
 @given(integers(min_value=0, max_value=100))
