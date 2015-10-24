@@ -1,8 +1,12 @@
-from hypothesis import given
+from hypothesis import (
+    given,
+    assume
+)
 from hypothesis.strategies import (
     integers,
     floats
 )
+from math import isnan
 from pytest import raises
 
 
@@ -19,4 +23,5 @@ def test_negation_is_self_inverse_int(x):
 
 @given(floats())
 def test_negation_is_self_inverse_float(x):
+    assume(not isnan(x))
     assert x == -(-x)
